@@ -1,0 +1,17 @@
+{
+  "name": "claudenewbiethailand",
+  "owner": {
+    "name": "wannabellsoft-cloud"
+  },
+  "metadata": {
+    "description": "Plugin Claude Code สำหรับมือใหม่ชาวไทย"
+  },
+  "plugins": [
+    {
+      "name": "thai-newbie",
+      "source": "./plugins/thai-newbie",
+      "description": "Claude Code ภาษาไทยสำหรับมือใหม่: ตอบเป็นไทย อธิบาย tech stack แบบไม่ต้องเป็น Dev (สลับเป็น Dev Mode ได้) แนบลิงก์ Deploy ทุกครั้ง และแสดงแผนงานกับความคืบหน้า",
+      "version": "1.0.0"
+    }
+  ]
+}
