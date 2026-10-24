@@ -4,6 +4,7 @@
 #   bash mode.sh dev      -> switch to Dev Mode
 #   bash mode.sh newbie   -> switch back to newbie mode
 # Stored per user (not per project), so the choice follows you across projects.
+# Until the user picks a mode, THAI_NEWBIE_DEFAULT_MODE (e.g. from a project's .claude/settings.json "env") decides.
 FILE="${CLAUDE_CONFIG_DIR:-$HOME/.claude}/thai-newbie-mode"
 case "$1" in
   dev|newbie)
@@ -12,6 +13,7 @@ case "$1" in
     ;;
   "")
     m=$(cat "$FILE" 2>/dev/null)
+    [ -z "$m" ] && m="$THAI_NEWBIE_DEFAULT_MODE"
     [ "$m" = "dev" ] && echo dev || echo newbie
     ;;
   *)
